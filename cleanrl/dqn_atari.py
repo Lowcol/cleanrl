@@ -51,9 +51,9 @@ class Args:
     # Algorithm specific arguments
     env_id: str = "BreakoutNoFrameskip-v4"
     """the id of the environment"""
-    total_timesteps: int = 10000000
+    total_timesteps: int = 800000
     """total timesteps of the experiments"""
-    learning_rate: float = 1e-4
+    learning_rate: float = 0.00025
     """the learning rate of the optimizer"""
     num_envs: int = 1
     """the number of parallel game environments"""
@@ -63,7 +63,7 @@ class Args:
     """the discount factor gamma"""
     tau: float = 1.0
     """the target network update rate"""
-    target_network_frequency: int = 1000
+    target_network_frequency: int = 10000
     """the timesteps it takes to update the target network"""
     batch_size: int = 32
     """the batch size of sample from the reply memory"""
@@ -73,7 +73,7 @@ class Args:
     """the ending epsilon for exploration"""
     exploration_fraction: float = 0.10
     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
-    learning_starts: int = 80000
+    learning_starts: int = 100000
     """timestep to start learning"""
     train_frequency: int = 4
     """the frequency of training"""
